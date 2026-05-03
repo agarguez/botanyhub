@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f6f8f6;
+  color: #1f2a1f;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1f3d2a, #2f6b45);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  opacity: 0.9;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav button {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card a {
+  color: #2f6b45;
+  text-decoration: none;
+  font-weight: bold;
+}
