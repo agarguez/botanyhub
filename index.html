@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BotanyHub España</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+<header class="header">
+  <h1>🌿 BotanyHub</h1>
+  <p>Explora recursos de botánica en España</p>
+
+  <nav>
+    <button onclick="show('resources')">Recursos</button>
+    <button onclick="show('courses')">Cursos</button>
+    <button onclick="show('jobs')">Empleo</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="resources" class="section">
+  <h2>Recursos botánicos</h2>
+  <input placeholder="Buscar recursos..." oninput="filter('resources', this.value)">
+  <div id="resourcesList" class="grid"></div>
+</section>
+
+<section id="courses" class="section hidden">
+  <h2>Cursos</h2>
+  <input placeholder="Buscar cursos..." oninput="filter('courses', this.value)">
+  <div id="coursesList" class="grid"></div>
+</section>
+
+<section id="jobs" class="section hidden">
+  <h2>Empleo</h2>
+  <input placeholder="Buscar empleo..." oninput="filter('jobs', this.value)">
+  <div id="jobsList" class="grid"></div>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
