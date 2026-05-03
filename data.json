@@ -1,0 +1,28 @@
+{
+  "resources": [
+    {
+      "name": "PlantNet",
+      "description": "Identificación de plantas por imagen",
+      "url": "https://plantnet.org"
+    },
+    {
+      "name": "GBIF España",
+      "description": "Base de datos global de biodiversidad",
+      "url": "https://www.gbif.org"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Botánica básica online",
+      "description": "Introducción a la botánica",
+      "url": "#"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "Técnico ambiental Andalucía",
+      "description": "Trabajo de campo en conservación",
+      "url": "#"
+    }
+  ]
+}
