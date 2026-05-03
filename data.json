@@ -2,27 +2,49 @@
   "resources": [
     {
       "name": "PlantNet",
-      "description": "Identificación de plantas por imagen",
-      "url": "https://plantnet.org"
+      "description": "Identificación de plantas mediante inteligencia colaborativa",
+      "url": "https://plantnet.org",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Plantago_lanceolata_flowers.jpg"
     },
     {
-      "name": "GBIF España",
-      "description": "Base de datos global de biodiversidad",
-      "url": "https://www.gbif.org"
+      "name": "GBIF",
+      "description": "Base global de datos de biodiversidad",
+      "url": "https://www.gbif.org",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flower_field.jpg"
+    },
+    {
+      "name": "Flora Ibérica",
+      "description": "Referencia científica de la flora española",
+      "url": "https://www.floraiberica.es",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Spanish_forest.jpg"
     }
   ],
   "courses": [
     {
       "name": "Botánica básica online",
-      "description": "Introducción a la botánica",
-      "url": "#"
+      "description": "Introducción a la botánica para principiantes",
+      "url": "#",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Leaf_structure.jpg"
+    },
+    {
+      "name": "Ecología vegetal",
+      "description": "Curso sobre ecosistemas y plantas",
+      "url": "#",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Forest_canopy.jpg"
     }
   ],
   "jobs": [
     {
       "name": "Técnico ambiental Andalucía",
-      "description": "Trabajo de campo en conservación",
-      "url": "#"
+      "description": "Trabajo de campo en conservación de ecosistemas",
+      "url": "#",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Field_researcher.jpg"
+    },
+    {
+      "name": "Investigador botánico",
+      "description": "Proyecto de biodiversidad en España",
+      "url": "#",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Botanical_lab.jpg"
     }
   ]
 }
