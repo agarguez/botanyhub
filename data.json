@@ -2,49 +2,95 @@
   "resources": [
     {
       "name": "PlantNet",
-      "description": "Identificación de plantas mediante inteligencia colaborativa",
+      "description": "Identificación de plantas mediante IA colaborativa. Una de las herramientas más usadas en Europa.",
       "url": "https://plantnet.org",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Plantago_lanceolata_flowers.jpg"
+      "category": "Identificación",
+      "level": "Beginner",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Plantago_lanceolata_flowers.jpg",
+      "tags": ["ia", "identificación", "plantas"]
     },
     {
-      "name": "GBIF",
-      "description": "Base global de datos de biodiversidad",
+      "name": "GBIF España",
+      "description": "Base de datos global de biodiversidad con millones de registros de especies.",
       "url": "https://www.gbif.org",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flower_field.jpg"
+      "category": "Base de datos",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flower_field.jpg",
+      "tags": ["biodiversidad", "datos", "ciencia"]
     },
     {
       "name": "Flora Ibérica",
-      "description": "Referencia científica de la flora española",
+      "description": "Referencia científica oficial sobre la flora de la península ibérica.",
       "url": "https://www.floraiberica.es",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Spanish_forest.jpg"
+      "category": "Investigación",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Spanish_forest.jpg",
+      "tags": ["botánica", "españa", "investigación"]
+    },
+    {
+      "name": "iNaturalist",
+      "description": "Plataforma global de observación y clasificación de biodiversidad.",
+      "url": "https://www.inaturalist.org",
+      "category": "Identificación",
+      "level": "Beginner",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Leaf_structure.jpg",
+      "tags": ["comunidad", "observación", "naturaleza"]
     }
   ],
+
   "courses": [
     {
-      "name": "Botánica básica online",
-      "description": "Introducción a la botánica para principiantes",
+      "name": "Introducción a la Botánica",
+      "description": "Curso básico sobre morfología vegetal y clasificación de plantas.",
       "url": "#",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Leaf_structure.jpg"
+      "provider": "Universidad / MOOC",
+      "level": "Beginner",
+      "price": "Free",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Forest_canopy.jpg",
+      "tags": ["botánica", "inicio", "plantas"]
     },
     {
-      "name": "Ecología vegetal",
-      "description": "Curso sobre ecosistemas y plantas",
+      "name": "Ecología Vegetal",
+      "description": "Estudio de ecosistemas y relaciones planta-entorno.",
       "url": "#",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Forest_canopy.jpg"
+      "provider": "Universidad",
+      "level": "Intermediate",
+      "price": "Paid",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Meadow_flowers.jpg",
+      "tags": ["ecología", "ecosistemas", "medioambiente"]
     }
   ],
+
   "jobs": [
     {
-      "name": "Técnico ambiental Andalucía",
-      "description": "Trabajo de campo en conservación de ecosistemas",
+      "name": "Técnico Ambiental",
+      "description": "Trabajo de campo en conservación de ecosistemas en España.",
       "url": "#",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Field_researcher.jpg"
+      "location": "Andalucía",
+      "type": "Field Work",
+      "remote": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Field_researcher.jpg",
+      "tags": ["empleo", "campo", "medioambiente"]
     },
     {
-      "name": "Investigador botánico",
-      "description": "Proyecto de biodiversidad en España",
+      "name": "Investigador en Botánica",
+      "description": "Proyecto de investigación sobre biodiversidad vegetal en España.",
       "url": "#",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Botanical_lab.jpg"
+      "location": "Madrid",
+      "type": "Research",
+      "remote": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Botanical_lab.jpg",
+      "tags": ["investigación", "ciencia", "botánica"]
+    },
+    {
+      "name": "Consultor Ambiental (Remote)",
+      "description": "Análisis de impacto ambiental y asesoría ecológica.",
+      "url": "#",
+      "location": "España",
+      "type": "Remote",
+      "remote": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Forest_path.jpg",
+      "tags": ["remoto", "consultoría", "ecología"]
     }
   ]
 }
