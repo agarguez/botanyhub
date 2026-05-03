@@ -6,16 +6,16 @@
       "url": "https://plantnet.org",
       "category": "Identificación",
       "level": "Beginner",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Plantago_lanceolata_flowers.jpg",
+      "image": "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa",
       "tags": ["ia", "identificación", "plantas"]
     },
     {
-      "name": "GBIF España",
+      "name": "GBIF",
       "description": "Base de datos global de biodiversidad con millones de registros de especies.",
       "url": "https://www.gbif.org",
       "category": "Base de datos",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flower_field.jpg",
+      "image": "https://images.unsplash.com/photo-1476231682828-37e571bc172f",
       "tags": ["biodiversidad", "datos", "ciencia"]
     },
     {
@@ -46,7 +46,7 @@
       "provider": "Universidad / MOOC",
       "level": "Beginner",
       "price": "Free",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Forest_canopy.jpg",
+      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
       "tags": ["botánica", "inicio", "plantas"]
     },
     {
@@ -69,7 +69,7 @@
       "location": "Andalucía",
       "type": "Field Work",
       "remote": false,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Field_researcher.jpg",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
       "tags": ["empleo", "campo", "medioambiente"]
     },
     {
