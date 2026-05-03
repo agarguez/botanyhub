@@ -3,42 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BotanyHub Pro</title>
+  <title>BotanyHub España</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div class="app">
+<header class="hero">
+  <div class="overlay"></div>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <h2>🌿 BotanyHub</h2>
+  <div class="hero-content">
+    <h1>BotanyHub</h1>
+    <p>Explora la flora, el conocimiento y las oportunidades botánicas en España</p>
 
-    <input id="searchGlobal" placeholder="Buscar...">
+    <div class="search-bar">
+      <input type="text" id="searchGlobal" placeholder="Buscar recursos, cursos o empleo...">
+    </div>
 
-    <button onclick="setView('resources')">Recursos</button>
-    <button onclick="setView('courses')">Cursos</button>
-    <button onclick="setView('jobs')">Empleo</button>
+    <nav>
+      <button onclick="show('resources')">🌿 Recursos</button>
+      <button onclick="show('courses')">🎓 Cursos</button>
+      <button onclick="show('jobs')">💼 Empleo</button>
+    </nav>
+  </div>
+</header>
 
-    <hr>
+<main>
 
-    <button onclick="toggleTheme()">🌓 Modo</button>
-    <button onclick="showFavs()">❤️ Favoritos</button>
-  </aside>
+<section id="resources" class="section">
+  <h2>Recursos botánicos</h2>
+  <div id="resourcesList" class="grid"></div>
+</section>
 
-  <!-- MAIN -->
-  <main class="main">
+<section id="courses" class="section hidden">
+  <h2>Cursos</h2>
+  <div id="coursesList" class="grid"></div>
+</section>
 
-    <header class="topbar">
-      <h1 id="title">Recursos botánicos</h1>
-    </header>
+<section id="jobs" class="section hidden">
+  <h2>Empleo en botánica</h2>
+  <div id="jobsList" class="grid"></div>
+</section>
 
-    <section id="grid" class="grid"></section>
+</main>
 
-  </main>
-
-</div>
+<!-- Botón flotante -->
+<a class="floating-btn" href="#resources">⬆</a>
 
 <script src="app.js"></script>
 </body>
