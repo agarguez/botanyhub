@@ -12,10 +12,11 @@
 <body>
 
 <header class="topbar">
-  <a href="./" class="logo" onclick="resetSearch()">BotanyHub</a>
+  <a href="./" class="logo" onclick="resetAll()">BotanyHub</a>
 
   <div class="nav-wrapper">
     <button class="menu-toggle">☰</button>
+
     <nav id="nav">
       <a href="resources.html">Recursos</a>
       <a href="courses.html">Cursos</a>
@@ -39,28 +40,26 @@
 
   <div class="hero-content">
     <h1>El hub definitivo de botánica</h1>
-    <p>Explora recursos, herramientas y oportunidades</p>
+    <p>Explora recursos, ciencia y oportunidades</p>
 
-    <input type="text" id="searchGlobal" placeholder="Buscar...">
+    <input type="text" id="searchGlobal" placeholder="Buscar en toda la web...">
   </div>
-</section>
-
-<section class="intro">
-  <p>
-    BotanyHub reúne en un único lugar los principales recursos botánicos disponibles.
-    Desde herramientas de identificación hasta revistas científicas, empleo y formación especializada.
-  </p>
 </section>
 
 <section class="news-section">
   <h2>Novedades</h2>
 
-  <div class="carousel" id="carousel">
+  <div class="carousel">
     <div class="carousel-track"></div>
     <button class="carousel-btn prev">‹</button>
     <button class="carousel-btn next">›</button>
     <div class="carousel-dots"></div>
   </div>
+</section>
+
+<section class="results-section hidden">
+  <h2>Resultados</h2>
+  <div id="results" class="grid"></div>
 </section>
 
 <script src="app.js"></script>
