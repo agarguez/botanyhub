@@ -1,4 +1,4 @@
-body{
+body {
   margin:0;
   font-family:'Inter',sans-serif;
   background:#f8f9fa;
@@ -6,167 +6,193 @@ body{
 }
 
 /* HEADER */
-.topbar{
+.topbar {
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:15px 30px;
   background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:10;
 }
 
-.logo{
+.logo {
+  font-weight:600;
   text-decoration:none;
   color:#1b4332;
+}
+
+nav button {
+  background:none;
+  border:none;
+  margin:0 10px;
+  font-size:0.95rem;
+  cursor:pointer;
+  color:#555;
+  transition:0.2s;
+}
+
+nav button:hover,
+nav button.active {
+  color:#2d6a4f;
   font-weight:600;
 }
 
-/* NAV */
-nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:#555;
-  font-weight:500;
-}
-
-nav a:hover{
-  color:#2d6a4f;
-}
-
-/* MOBILE */
-.menu-toggle{display:none;}
-
-@media(max-width:768px){
-  nav{
-    display:none;
-    position:absolute;
-    top:60px;
-    right:20px;
-    background:white;
-    flex-direction:column;
-    padding:15px;
-  }
-
-  nav.open{display:flex;}
-  .menu-toggle{display:block;}
-}
-
 /* HERO */
-.hero-video{
+.hero {
   position:relative;
   height:60vh;
-  overflow:hidden;
+  background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.hero-video video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.hero-overlay{
+.hero-overlay {
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.4);
 }
 
-.hero-content{
+.hero-content {
   position:relative;
-  z-index:2;
   color:white;
   text-align:center;
 }
 
-.hero-content input{
-  padding:14px;
+.hero input {
+  padding:12px;
   width:60%;
   border-radius:30px;
   border:none;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-  padding:30px;
-}
-
-/* CARD */
-.card{
-  background:white;
-  border-radius:12px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-
-.card-content{
-  padding:15px;
+  margin-top:15px;
 }
 
 /* CAROUSEL */
-.carousel{
+.news-section {
+  padding:40px;
+}
+
+.carousel {
   position:relative;
   overflow:hidden;
+  border-radius:12px;
 }
 
-.carousel-track{
+.carousel-track {
   display:flex;
-  transition:transform .6s ease;
+  transition:transform 0.6s ease;
 }
 
-.slide{
+.slide {
   min-width:100%;
-  height:320px;
+  height:300px;
   position:relative;
+  color:white;
 }
 
-.slide img{
+.slide img {
   position:absolute;
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
-.slide::after{
+.slide::after {
   content:"";
   position:absolute;
   inset:0;
   background:rgba(0,0,0,0.4);
 }
 
-.slide-content{
+.slide-content {
   position:relative;
-  color:white;
+  z-index:2;
   padding:30px;
+  max-width:600px;
 }
 
-.carousel-btn{
+.carousel-btn {
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:none;
-  border:none;
-  font-size:30px;
+  background:rgba(0,0,0,0.5);
   color:white;
+  border:none;
+  padding:10px;
   cursor:pointer;
 }
 
-.prev{left:10px;}
-.next{right:10px;}
+.prev { left:10px; }
+.next { right:10px; }
 
-/* SEARCH RESULTS */
-.hidden{display:none;}
+.carousel-dots {
+  text-align:center;
+  margin-top:10px;
+}
+
+.carousel-dots span {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin:5px;
+  background:#ccc;
+  border-radius:50%;
+}
+
+.carousel-dots span.active {
+  background:#2d6a4f;
+}
+
+/* GRID */
+.section {
+  padding:40px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:white;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:15px;
+}
+
+/* MODAL */
+.modal {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-content {
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  max-width:500px;
+}
