@@ -1,38 +1,35 @@
 let data = {};
-let currentFilter = {
-  search: "",
-  category: "",
-  level: "",
-  tag: ""
-};
+let current = { search:"", category:"", level:"", tag:"" };
 
 fetch("data.json")
-.then(r => r.json())
-.then(json => {
-  data = json;
-  buildSections();
+.then(r=>r.json())
+.then(json=>{
+  data=json;
+  buildUI();
   populateFilters();
   renderAll();
 });
 
-/* CREAR SECCIONES AUTOMÁTICAMENTE */
-function buildSections(){
+/* UI */
+function buildUI(){
   const main = document.getElementById("mainContent");
+  const nav = document.getElementById("nav");
 
   Object.keys(data).forEach(type=>{
-    const section = document.createElement("section");
-    section.id = type;
-    section.className = "section hidden";
+    // NAV
+    const btn = document.createElement("button");
+    btn.innerText = type;
+    btn.onclick = ()=>show(type, btn);
+    nav.appendChild(btn);
 
-    section.innerHTML = `
-      <h2>${type.toUpperCase()}</h2>
-      <div class="grid"></div>
-    `;
+    // SECTION
+    const sec = document.createElement("section");
+    sec.id = type;
+    sec.className = "section";
 
-    main.appendChild(section);
+    sec.innerHTML = `<h2>${type}</h2><div class="grid"></div>`;
+    main.appendChild(sec);
   });
-
-  show("resources");
 }
 
 /* RENDER */
@@ -41,85 +38,88 @@ function renderAll(){
     const container = document.querySelector(`#${type} .grid`);
     if(!container) return;
 
-    const filtered = data[type].filter(item=>{
-      const text = (item.name + item.description + (item.tags||[]).join(" ")).toLowerCase();
-
-      return (
-        text.includes(currentFilter.search) &&
-        (!currentFilter.category || item.category === currentFilter.category) &&
-        (!currentFilter.level || item.level === currentFilter.level) &&
-        (!currentFilter.tag || (item.tags||[]).includes(currentFilter.tag))
-      );
+    let items = data[type].filter(item=>{
+      let text = (item.name+item.description+(item.tags||[]).join(" ")).toLowerCase();
+      return text.includes(current.search)
+        && (!current.category || item.category===current.category)
+        && (!current.level || item.level===current.level)
+        && (!current.tag || (item.tags||[]).includes(current.tag));
     });
 
-    container.innerHTML = filtered.map(card).join("");
+    if(items.length===0){
+      container.innerHTML = "<p>No hay resultados</p>";
+      return;
+    }
+
+    container.innerHTML = items.map(card).join("");
   });
 }
 
 /* CARD */
-function card(item){
+function card(i){
   return `
   <div class="card">
-    <img src="${item.image}">
+    <img src="${i.image}">
     <div class="card-content">
-      <h3>${item.name}</h3>
-      <p>${item.description}</p>
+      <h3>${i.name}</h3>
+      <p>${i.description}</p>
 
       <div class="tags">
-        ${(item.tags||[]).map(t=>`<span onclick="filterTag('${t}')">${t}</span>`).join("")}
+        ${(i.tags||[]).map(t=>`<span onclick="setTag('${t}')">${t}</span>`).join("")}
       </div>
 
-      ${item.url ? `<a href="${item.url}" target="_blank">Visitar</a>` : ""}
+      ${i.url ? `<a href="${i.url}" target="_blank">Visitar →</a>`:""}
     </div>
-  </div>
-  `;
+  </div>`;
 }
 
 /* NAV */
-function show(id){
-  document.querySelectorAll(".section").forEach(s=>s.classList.add("hidden"));
-  document.getElementById(id)?.classList.remove("hidden");
+function show(id, btn){
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+
+  document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+  if(btn) btn.classList.add("active");
+
+  window.scrollTo({top:0,behavior:"smooth"});
 }
 
-/* FILTROS */
+/* FILTERS */
 function populateFilters(){
-  const categories = new Set();
-  const levels = new Set();
+  const cat = new Set();
+  const lvl = new Set();
 
-  Object.values(data).flat().forEach(item=>{
-    if(item.category) categories.add(item.category);
-    if(item.level) levels.add(item.level);
+  Object.values(data).flat().forEach(i=>{
+    if(i.category) cat.add(i.category);
+    if(i.level) lvl.add(i.level);
   });
 
-  const catSelect = document.getElementById("filterCategory");
-  const lvlSelect = document.getElementById("filterLevel");
-
-  categories.forEach(c=>{
-    catSelect.innerHTML += `<option value="${c}">${c}</option>`;
+  cat.forEach(c=>{
+    document.getElementById("filterCategory").innerHTML += `<option>${c}</option>`;
   });
 
-  levels.forEach(l=>{
-    lvlSelect.innerHTML += `<option value="${l}">${l}</option>`;
+  lvl.forEach(l=>{
+    document.getElementById("filterLevel").innerHTML += `<option>${l}</option>`;
   });
 }
 
-/* EVENTOS */
+/* EVENTS */
 document.getElementById("searchGlobal").addEventListener("input", e=>{
-  currentFilter.search = e.target.value.toLowerCase();
+  current.search = e.target.value.toLowerCase();
   renderAll();
 });
 
 document.getElementById("filterCategory").addEventListener("change", e=>{
-  currentFilter.category = e.target.value;
+  current.category = e.target.value;
   renderAll();
 });
 
 document.getElementById("filterLevel").addEventListener("change", e=>{
-  currentFilter.level = e.target.value;
+  current.level = e.target.value;
   renderAll();
 });
 
-function filterTag(tag){
-  currentFilter.tag = tag;
+function setTag(tag){
+  current.tag = (current.tag===tag) ? "" : tag;
   renderAll();
 }
