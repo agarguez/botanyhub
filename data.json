@@ -91,6 +91,32 @@
       "remote": true,
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Forest_path.jpg",
       "tags": ["remoto", "consultoría", "ecología"]
-    }
+      }
+  ],
+  "citizen": [
+    {"name":"Observation.org","description":"Observación biodiversidad","url":"https://observation.org","image":"https://observation.org/static/images/logo.png","tags":["observación"]},
+    {"name":"eBird","description":"Aves","url":"https://ebird.org","image":"https://upload.wikimedia.org/wikipedia/commons/e/e4/Ebird_logo.png","tags":["aves"]},
+    {"name":"Natusfera","description":"Ciencia ciudadana en España","url":"https://natusfera.gbif.es","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["españa"]}
+  ],
+
+  "journals": [
+    {"name":"Annals of Botany","description":"Revista botánica","url":"https://academic.oup.com/aob","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["revista"]},
+    {"name":"Plant Ecology","description":"Ecología vegetal","url":"https://springer.com","image":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Springer_logo.png","tags":["ecología"]},
+    {"name":"New Phytologist","description":"Investigación avanzada","url":"https://nph.onlinelibrary.wiley.com","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["revista"]}
+  ],
+
+  "societies": [
+    {"name":"SEBOT","description":"Sociedad Española de Botánica","url":"https://sebotanica.org","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["españa"]},
+    {"name":"BSA","description":"Botanical Society of America","url":"https://botany.org","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["usa"]}
+  ],
+
+  "education": [
+    {"name":"Coursera","description":"Cursos online","url":"https://coursera.org","image":"https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg","tags":["curso"]},
+    {"name":"edX","description":"Educación online","url":"https://edx.org","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["curso"]}
+  ],
+
+  "books": [
+    {"name":"Flora Europaea","description":"Referencia europea","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png","tags":["libro"]},
+    {"name":"Plant Systematics","description":"Clasificación","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png","tags":["taxonomía"]}
   ]
 }
