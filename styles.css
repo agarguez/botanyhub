@@ -7,18 +7,18 @@ body {
 
 /* HERO */
 .hero {
-  height:85vh;
+  height:80vh;
   background:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e') center/cover;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .overlay {
   position:absolute;
   inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+  background:rgba(0,0,0,0.7);
 }
 
 .hero-content {
@@ -26,75 +26,59 @@ body {
   text-align:center;
 }
 
-.hero h1 {
-  font-size:4rem;
-  letter-spacing:2px;
-}
-
-input {
-  padding:12px;
-  width:60%;
-  border-radius:30px;
+input, select {
+  padding:10px;
+  margin:5px;
+  border-radius:20px;
   border:none;
-  margin-top:20px;
 }
 
 /* NAV */
-nav {
-  margin-top:20px;
-}
-
 nav button {
   margin:5px;
-  padding:10px 16px;
+  padding:8px 14px;
   border:none;
   border-radius:20px;
-  background:rgba(255,255,255,0.1);
+  background:#2d6a4f;
   color:white;
   cursor:pointer;
-  transition:0.3s;
 }
 
-nav button:hover {
-  background:#2d6a4f;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section {
-  padding:50px;
-  animation:fade 0.5s ease;
+  padding:40px;
+  animation:fade 0.4s ease;
 }
 
 .hidden { display:none; }
 
 @keyframes fade {
   from {opacity:0; transform:translateY(10px)}
-  to {opacity:1; transform:translateY(0)}
+  to {opacity:1;}
 }
 
 /* GRID */
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
   background:rgba(255,255,255,0.05);
-  border-radius:16px;
+  border-radius:14px;
   overflow:hidden;
-  backdrop-filter:blur(12px);
-  transition:0.4s;
+  transition:0.3s;
 }
 
 .card:hover {
-  transform:translateY(-5px) scale(1.02);
+  transform:translateY(-5px);
 }
 
 .card img {
   width:100%;
-  height:160px;
+  height:150px;
   object-fit:cover;
 }
 
@@ -103,10 +87,10 @@ nav button:hover {
 }
 
 .tags span {
-  background:#2d6a4f;
-  padding:4px 8px;
+  background:#40916c;
+  padding:3px 8px;
   border-radius:10px;
-  font-size:0.7rem;
   margin:2px;
-}
+  font-size:0.7rem;
+  cursor:pointer;
 }
