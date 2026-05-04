@@ -126,7 +126,7 @@ nav button.active {
 }
 
 .section p {
-  max-width:700px;
+  max-width:none;
   margin-bottom:25px;
   color:#444;
 }
