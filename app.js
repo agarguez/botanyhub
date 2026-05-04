@@ -11,9 +11,9 @@ fetch("data.json")
   checkMenu();
 });
 
-/* TITLES */
+/* SECCIONES */
 const sectionsInfo = {
-  resources:{title:"Recursos",text:"Herramientas digitales y bases de datos para identificar plantas."},
+  resources:{title:"Recursos",text:"Herramientas y bases de datos botánicas."},
   courses:{title:"Cursos",text:"Formación en botánica."},
   jobs:{title:"Empleo",text:"Oportunidades profesionales."},
   citizen:{title:"Ciencia ciudadana",text:"Plataformas colaborativas."},
@@ -59,7 +59,6 @@ function scrollToSection(id,btn){
   document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
 
-  // cerrar menú móvil
   document.getElementById("nav").classList.remove("open");
 }
 
@@ -135,25 +134,28 @@ function resetAll(){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-/* MENU INTELIGENTE */
+/* MENU */
 function checkMenu(){
   const nav = document.getElementById("nav");
   const toggle = document.querySelector(".menu-toggle");
 
-  setTimeout(()=>{
+  const isMobile = window.innerWidth <= 768;
+
+  if(isMobile){
+    toggle.style.display = "block";
+    nav.classList.remove("open");
+  } else {
     if(nav.scrollWidth > nav.clientWidth){
       toggle.style.display = "block";
-      nav.classList.remove("open");
     } else {
       toggle.style.display = "none";
       nav.classList.remove("open");
     }
-  },100);
+  }
 }
 
 window.addEventListener("resize",checkMenu);
 
-/* TOGGLE MENU */
 document.querySelector(".menu-toggle").addEventListener("click",()=>{
   document.getElementById("nav").classList.toggle("open");
 });
