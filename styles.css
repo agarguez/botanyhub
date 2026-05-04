@@ -182,6 +182,7 @@ nav button.active {
   position:relative;
   overflow:hidden;
   border-radius:14px;
+  height:340px;
 }
 
 .carousel-track {
@@ -191,7 +192,7 @@ nav button.active {
 
 .slide {
   min-width:100%;
-  height:320px;
+  height:100%;
   position:relative;
   color:white;
 }
