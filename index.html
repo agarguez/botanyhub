@@ -11,40 +11,26 @@
 
 <body>
 
-<header class="hero">
-  <div class="overlay"></div>
+<header class="topbar">
+  <div class="logo">BotanyHub</div>
 
-  <div class="hero-content">
-    <h1>🌿 BotanyHub</h1>
-    <p>Hub de recursos botánicos en España</p>
-
-    <input type="text" id="searchGlobal" placeholder="Buscar recursos...">
-
-    <div class="filters">
-      <select id="filterCategory">
-        <option value="">Categoría</option>
-      </select>
-
-      <select id="filterLevel">
-        <option value="">Nivel</option>
-      </select>
-    </div>
-
-    <nav>
-      <button onclick="show('resources')">Recursos</button>
-      <button onclick="show('courses')">Cursos</button>
-      <button onclick="show('citizen')">Ciencia Ciudadana</button>
-      <button onclick="show('journals')">Revistas</button>
-      <button onclick="show('societies')">Sociedades</button>
-      <button onclick="show('education')">Educación</button>
-      <button onclick="show('books')">Libros</button>
-      <button onclick="show('jobs')">Empleo</button>
-    </nav>
-  </div>
+  <nav id="nav"></nav>
 </header>
+
+<section class="hero">
+  <h1>El hub definitivo de recursos botánicos</h1>
+  <p>Encuentra herramientas, cursos, revistas y oportunidades en segundos</p>
+
+  <input type="text" id="searchGlobal" placeholder="Buscar recursos...">
+
+  <div class="filters">
+    <select id="filterCategory"><option value="">Categoría</option></select>
+    <select id="filterLevel"><option value="">Nivel</option></select>
+  </div>
+</section>
 
 <main id="mainContent"></main>
 
-<script src="app.js"></script>
 </body>
+<script src="app.js"></script>
 </html>
