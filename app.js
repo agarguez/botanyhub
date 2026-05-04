@@ -10,16 +10,40 @@ fetch("data.json")
   renderAll();
 });
 
-/* TITLES */
-const titles = {
-  resources:"Recursos",
-  courses:"Cursos",
-  jobs:"Empleo",
-  citizen:"Ciencia ciudadana",
-  journals:"Revistas científicas",
-  societies:"Sociedades científicas",
-  education:"Educación",
-  books:"Bibliografía"
+/* TITLES + DESCRIPCIÓN */
+const sectionsInfo = {
+  resources:{
+    title:"Recursos",
+    text:"Herramientas digitales y bases de datos para identificar y estudiar plantas."
+  },
+  courses:{
+    title:"Cursos",
+    text:"Formación académica y online en botánica."
+  },
+  jobs:{
+    title:"Empleo",
+    text:"Oportunidades profesionales en el ámbito botánico."
+  },
+  citizen:{
+    title:"Ciencia ciudadana",
+    text:"Plataformas colaborativas de biodiversidad."
+  },
+  journals:{
+    title:"Revistas científicas",
+    text:"Publicaciones académicas de referencia."
+  },
+  societies:{
+    title:"Sociedades científicas",
+    text:"Organizaciones dedicadas a la botánica."
+  },
+  education:{
+    title:"Educación",
+    text:"Recursos formativos y plataformas educativas."
+  },
+  books:{
+    title:"Bibliografía",
+    text:"Libros clave para el estudio botánico."
+  }
 };
 
 /* UI */
@@ -30,17 +54,33 @@ function buildUI(){
   Object.keys(data).forEach(type=>{
     if(type==="news") return;
 
+    const info = sectionsInfo[type] || {title:type,text:""};
+
     const btn=document.createElement("button");
-    btn.innerText=titles[type] || type;
-    btn.onclick=()=>show(type,btn);
+    btn.innerText=info.title;
+    btn.onclick=()=>scrollToSection(type,btn);
     nav.appendChild(btn);
 
     const sec=document.createElement("section");
     sec.id=type;
     sec.className="section";
-    sec.innerHTML=`<h2>${titles[type]}</h2><div class="grid"></div>`;
+
+    sec.innerHTML=`
+      <h2>${info.title}</h2>
+      <p>${info.text}</p>
+      <div class="grid"></div>
+    `;
+
     main.appendChild(sec);
   });
+}
+
+/* SCROLL */
+function scrollToSection(id,btn){
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+
+  document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
 }
 
 /* CAROUSEL */
@@ -50,7 +90,6 @@ function buildCarousel(){
   if(!data.news) return;
 
   const track=document.querySelector(".carousel-track");
-  const dots=document.querySelector(".carousel-dots");
 
   track.innerHTML=data.news.map(n=>`
     <div class="slide">
@@ -62,19 +101,13 @@ function buildCarousel(){
     </div>
   `).join("");
 
-  dots.innerHTML=data.news.map((_,idx)=>`<span onclick="go(${idx})"></span>`).join("");
-
-  setInterval(()=>{i=(i+1)%data.news.length; update();},4000);
+  setInterval(()=>{i=(i+1)%data.news.length;update();},4000);
   update();
 }
 
 function update(){
   document.querySelector(".carousel-track").style.transform=`translateX(-${i*100}%)`;
-  document.querySelectorAll(".carousel-dots span")
-    .forEach((d,idx)=>d.classList.toggle("active",idx===i));
 }
-
-function go(n){ i=n; update(); }
 
 /* RENDER */
 function renderAll(){
@@ -108,17 +141,21 @@ function openLink(url){
   if(url) window.open(url,"_blank");
 }
 
-/* NAV */
-function show(id,btn){
-  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
-  document.getElementById(id).style.display="block";
-
-  document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-}
-
 /* SEARCH */
 document.getElementById("searchGlobal").addEventListener("input",e=>{
   current.search=e.target.value.toLowerCase();
   renderAll();
+});
+
+/* RESET */
+function resetAll(){
+  document.getElementById("searchGlobal").value="";
+  current.search="";
+  renderAll();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* MOBILE MENU */
+document.querySelector(".menu-toggle").addEventListener("click",()=>{
+  document.getElementById("nav").classList.toggle("open");
 });
