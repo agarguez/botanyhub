@@ -256,10 +256,71 @@ nav button.active {
   background:#2d6a4f;
 }
 
-/* CONTACT */
+/* CONTACT (ORIGINAL - mantenido) */
 iframe {
   border:none;
   border-radius:10px;
+}
+
+/* 🔥 NUEVA SECCIÓN CONTACTO PRO */
+.contact-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.contact-card {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  text-decoration:none;
+  color:#1b4332;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  transition:all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-card span {
+  margin-top:10px;
+  font-weight:500;
+}
+
+/* ICONOS */
+.icon {
+  width:42px;
+  height:42px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.icon.orcid {
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg');
+}
+
+.icon.linkedin {
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg');
+}
+
+.icon.bluesky {
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg');
+}
+
+.icon.researchgate {
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg');
+}
+
+.icon.github {
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
 }
 
 /* 🔥 MOBILE */
