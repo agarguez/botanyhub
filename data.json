@@ -2,121 +2,226 @@
   "resources": [
     {
       "name": "PlantNet",
-      "description": "Identificación de plantas mediante IA colaborativa. Una de las herramientas más usadas en Europa.",
+      "description": "Identificación de plantas mediante IA colaborativa.",
       "url": "https://plantnet.org",
       "category": "Identificación",
       "level": "Beginner",
       "image": "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa",
-      "tags": ["ia", "identificación", "plantas"]
+      "tags": ["ia","identificación","plantas"]
     },
     {
       "name": "GBIF",
-      "description": "Base de datos global de biodiversidad con millones de registros de especies.",
+      "description": "Base de datos global de biodiversidad.",
       "url": "https://www.gbif.org",
       "category": "Base de datos",
       "level": "Advanced",
       "image": "https://images.unsplash.com/photo-1476231682828-37e571bc172f",
-      "tags": ["biodiversidad", "datos", "ciencia"]
+      "tags": ["datos","biodiversidad"]
     },
     {
       "name": "Flora Ibérica",
-      "description": "Referencia científica oficial sobre la flora de la península ibérica.",
+      "description": "Referencia científica de flora española.",
       "url": "https://www.floraiberica.es",
       "category": "Investigación",
       "level": "Advanced",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Spanish_forest.jpg",
-      "tags": ["botánica", "españa", "investigación"]
+      "tags": ["botánica","españa"]
     },
     {
       "name": "iNaturalist",
-      "description": "Plataforma global de observación y clasificación de biodiversidad.",
+      "description": "Plataforma de observación de biodiversidad.",
       "url": "https://www.inaturalist.org",
-      "category": "Identificación",
+      "category": "Ciencia ciudadana",
       "level": "Beginner",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Leaf_structure.jpg",
-      "tags": ["comunidad", "observación", "naturaleza"]
+      "tags": ["comunidad","naturaleza"]
     }
   ],
 
   "courses": [
     {
       "name": "Introducción a la Botánica",
-      "description": "Curso básico sobre morfología vegetal y clasificación de plantas.",
+      "description": "Curso básico sobre plantas.",
       "url": "#",
-      "provider": "Universidad / MOOC",
-      "level": "Beginner",
+      "provider": "MOOC",
       "price": "Free",
+      "category": "Educación",
+      "level": "Beginner",
       "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-      "tags": ["botánica", "inicio", "plantas"]
+      "tags": ["botánica","inicio"]
     },
     {
       "name": "Ecología Vegetal",
-      "description": "Estudio de ecosistemas y relaciones planta-entorno.",
+      "description": "Relación entre plantas y entorno.",
       "url": "#",
       "provider": "Universidad",
-      "level": "Intermediate",
       "price": "Paid",
+      "category": "Educación",
+      "level": "Intermediate",
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Meadow_flowers.jpg",
-      "tags": ["ecología", "ecosistemas", "medioambiente"]
+      "tags": ["ecología"]
     }
   ],
 
   "jobs": [
     {
       "name": "Técnico Ambiental",
-      "description": "Trabajo de campo en conservación de ecosistemas en España.",
+      "description": "Trabajo de campo en conservación.",
       "url": "#",
       "location": "Andalucía",
       "type": "Field Work",
       "remote": false,
+      "category": "Empleo",
+      "level": "Intermediate",
       "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-      "tags": ["empleo", "campo", "medioambiente"]
+      "tags": ["campo","medioambiente"]
     },
     {
       "name": "Investigador en Botánica",
-      "description": "Proyecto de investigación sobre biodiversidad vegetal en España.",
+      "description": "Proyecto de investigación vegetal.",
       "url": "#",
       "location": "Madrid",
       "type": "Research",
       "remote": false,
+      "category": "Empleo",
+      "level": "Advanced",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Botanical_lab.jpg",
-      "tags": ["investigación", "ciencia", "botánica"]
+      "tags": ["investigación"]
     },
     {
-      "name": "Consultor Ambiental (Remote)",
-      "description": "Análisis de impacto ambiental y asesoría ecológica.",
+      "name": "Consultor Ambiental",
+      "description": "Análisis de impacto ambiental.",
       "url": "#",
       "location": "España",
       "type": "Remote",
       "remote": true,
+      "category": "Empleo",
+      "level": "Intermediate",
       "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Forest_path.jpg",
-      "tags": ["remoto", "consultoría", "ecología"]
-      }
+      "tags": ["consultoría","remoto"]
+    }
   ],
+
   "citizen": [
-    {"name":"Observation.org","description":"Observación biodiversidad","url":"https://observation.org","image":"https://observation.org/static/images/logo.png","tags":["observación"]},
-    {"name":"eBird","description":"Aves","url":"https://ebird.org","image":"https://upload.wikimedia.org/wikipedia/commons/e/e4/Ebird_logo.png","tags":["aves"]},
-    {"name":"Natusfera","description":"Ciencia ciudadana en España","url":"https://natusfera.gbif.es","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["españa"]}
+    {
+      "name": "Observation.org",
+      "description": "Plataforma de observación de biodiversidad.",
+      "url": "https://observation.org",
+      "category": "Ciencia ciudadana",
+      "level": "Beginner",
+      "image": "https://observation.org/static/images/logo.png",
+      "tags": ["observación"]
+    },
+    {
+      "name": "eBird",
+      "description": "Base de datos de aves.",
+      "url": "https://ebird.org",
+      "category": "Ciencia ciudadana",
+      "level": "Beginner",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Ebird_logo.png",
+      "tags": ["aves"]
+    },
+    {
+      "name": "Natusfera",
+      "description": "Ciencia ciudadana en España.",
+      "url": "https://natusfera.gbif.es",
+      "category": "Ciencia ciudadana",
+      "level": "Beginner",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "tags": ["españa"]
+    }
   ],
 
   "journals": [
-    {"name":"Annals of Botany","description":"Revista botánica","url":"https://academic.oup.com/aob","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["revista"]},
-    {"name":"Plant Ecology","description":"Ecología vegetal","url":"https://springer.com","image":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Springer_logo.png","tags":["ecología"]},
-    {"name":"New Phytologist","description":"Investigación avanzada","url":"https://nph.onlinelibrary.wiley.com","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["revista"]}
+    {
+      "name": "Annals of Botany",
+      "description": "Revista científica internacional.",
+      "url": "https://academic.oup.com/aob",
+      "category": "Revista científica",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "tags": ["revista"]
+    },
+    {
+      "name": "Plant Ecology",
+      "description": "Ecología vegetal.",
+      "url": "https://springer.com",
+      "category": "Revista científica",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Springer_logo.png",
+      "tags": ["ecología"]
+    },
+    {
+      "name": "New Phytologist",
+      "description": "Investigación avanzada en plantas.",
+      "url": "https://nph.onlinelibrary.wiley.com",
+      "category": "Revista científica",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "tags": ["investigación"]
+    }
   ],
 
   "societies": [
-    {"name":"SEBOT","description":"Sociedad Española de Botánica","url":"https://sebotanica.org","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["españa"]},
-    {"name":"BSA","description":"Botanical Society of America","url":"https://botany.org","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["usa"]}
+    {
+      "name": "Sociedad Española de Botánica",
+      "description": "Principal sociedad botánica en España.",
+      "url": "https://www.sebotanica.org",
+      "category": "Sociedad científica",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "tags": ["españa"]
+    },
+    {
+      "name": "Botanical Society of America",
+      "description": "Organización botánica internacional.",
+      "url": "https://botany.org",
+      "category": "Sociedad científica",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "tags": ["internacional"]
+    }
   ],
 
   "education": [
-    {"name":"Coursera","description":"Cursos online","url":"https://coursera.org","image":"https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg","tags":["curso"]},
-    {"name":"edX","description":"Educación online","url":"https://edx.org","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png","tags":["curso"]}
+    {
+      "name": "Coursera",
+      "description": "Cursos universitarios online.",
+      "url": "https://coursera.org",
+      "category": "Educación",
+      "level": "Beginner",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg",
+      "tags": ["curso"]
+    },
+    {
+      "name": "edX",
+      "description": "Plataforma de educación online.",
+      "url": "https://edx.org",
+      "category": "Educación",
+      "level": "Beginner",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "tags": ["curso"]
+    }
   ],
 
   "books": [
-    {"name":"Flora Europaea","description":"Referencia europea","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png","tags":["libro"]},
-    {"name":"Plant Systematics","description":"Clasificación","image":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png","tags":["taxonomía"]}
+    {
+      "name": "Flora Europaea",
+      "description": "Referencia botánica europea.",
+      "url": "",
+      "category": "Bibliografía",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png",
+      "tags": ["libro"]
+    },
+    {
+      "name": "Plant Systematics",
+      "description": "Clasificación de plantas.",
+      "url": "",
+      "category": "Bibliografía",
+      "level": "Advanced",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png",
+      "tags": ["taxonomía"]
+    }
   ]
 }
