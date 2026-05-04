@@ -8,10 +8,10 @@ fetch("data.json")
   buildUI();
   buildCarousel();
   renderAll();
-  checkMenu(); // 🔥 nuevo
+  checkMenu();
 });
 
-/* TITLES + TEXTO */
+/* TITLES */
 const sectionsInfo = {
   resources:{title:"Recursos",text:"Herramientas digitales y bases de datos para identificar plantas."},
   courses:{title:"Cursos",text:"Formación en botánica."},
@@ -58,6 +58,9 @@ function scrollToSection(id,btn){
 
   document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
+
+  // cerrar menú móvil
+  document.getElementById("nav").classList.remove("open");
 }
 
 /* CAROUSEL */
@@ -132,28 +135,25 @@ function resetAll(){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-/* 🔥 MENU INTELIGENTE */
+/* MENU INTELIGENTE */
 function checkMenu(){
-  const nav=document.getElementById("nav");
-  const toggle=document.querySelector(".menu-toggle");
+  const nav = document.getElementById("nav");
+  const toggle = document.querySelector(".menu-toggle");
 
-  // esperar a render
   setTimeout(()=>{
     if(nav.scrollWidth > nav.clientWidth){
-      toggle.style.display="block";
+      toggle.style.display = "block";
       nav.classList.remove("open");
     } else {
-      toggle.style.display="none";
+      toggle.style.display = "none";
       nav.classList.remove("open");
-      nav.style.display="flex";
     }
   },100);
 }
 
-/* 🔥 REACCIONA AL RESIZE */
 window.addEventListener("resize",checkMenu);
 
-/* MOBILE MENU */
+/* TOGGLE MENU */
 document.querySelector(".menu-toggle").addEventListener("click",()=>{
   document.getElementById("nav").classList.toggle("open");
 });
