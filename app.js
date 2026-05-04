@@ -1,13 +1,11 @@
 let data = {};
-let current = { search:"", category:"", level:"", tag:"" };
+let current = { search:"" };
 
-/* FETCH */
 fetch("data.json")
 .then(r=>r.json())
 .then(json=>{
   data=json;
   buildUI();
-  populateFilters();
   buildCarousel();
   renderAll();
 });
@@ -33,48 +31,47 @@ function buildUI(){
   });
 }
 
-/* CAROUSEL */
-let slideIndex=0, interval;
+/* CAROUSEL SEGURO */
+let slideIndex=0;
+let interval=null;
 
 function buildCarousel(){
+  if(!data.news || !Array.isArray(data.news) || data.news.length===0){
+    document.getElementById("carousel").style.display="none";
+    return;
+  }
+
   const track=document.querySelector(".carousel-track");
   const dots=document.querySelector(".carousel-dots");
 
-  if(!data.news) return;
-
   track.innerHTML=data.news.map(n=>`
     <div class="slide">
-      <img src="${n.image}">
+      <img src="${n.image || ''}">
       <div class="slide-content">
         <h3>${n.title}</h3>
         <p>${n.description}</p>
-        <a href="${n.url}" target="_blank">Leer más →</a>
+        ${n.url ? `<a href="${n.url}" target="_blank">Leer más →</a>` : ""}
       </div>
     </div>
   `).join("");
 
-  dots.innerHTML=data.news.map((_,i)=>`<span onclick="goToSlide(${i})"></span>`).join("");
+  dots.innerHTML=data.news.map((_,i)=>`<span data-i="${i}"></span>`).join("");
+
+  document.querySelectorAll(".carousel-dots span").forEach(d=>{
+    d.onclick=()=>goToSlide(parseInt(d.dataset.i));
+  });
+
+  document.querySelector(".next").onclick=nextSlide;
+  document.querySelector(".prev").onclick=prevSlide;
 
   startAuto();
   updateCarousel();
-
-  /* swipe */
-  let startX=0;
-  track.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
-  track.addEventListener("touchend",e=>{
-    let endX=e.changedTouches[0].clientX;
-    if(endX-startX>50) prevSlide();
-    if(startX-endX>50) nextSlide();
-  });
-
-  /* hover pause */
-  const carousel=document.getElementById("carousel");
-  carousel.addEventListener("mouseenter",stopAuto);
-  carousel.addEventListener("mouseleave",startAuto);
 }
 
 function updateCarousel(){
   const track=document.querySelector(".carousel-track");
+  if(!track) return;
+
   track.style.transform=`translateX(-${slideIndex*100}%)`;
 
   document.querySelectorAll(".carousel-dots span")
@@ -82,11 +79,13 @@ function updateCarousel(){
 }
 
 function nextSlide(){
+  if(!data.news) return;
   slideIndex=(slideIndex+1)%data.news.length;
   updateCarousel();
 }
 
 function prevSlide(){
+  if(!data.news) return;
   slideIndex=(slideIndex-1+data.news.length)%data.news.length;
   updateCarousel();
 }
@@ -102,13 +101,8 @@ function startAuto(){
 }
 
 function stopAuto(){
-  clearInterval(interval);
+  if(interval) clearInterval(interval);
 }
-
-document.addEventListener("click",e=>{
-  if(e.target.classList.contains("next")) nextSlide();
-  if(e.target.classList.contains("prev")) prevSlide();
-});
 
 /* RENDER */
 function renderAll(){
@@ -118,9 +112,8 @@ function renderAll(){
     const container=document.querySelector(`#${type} .grid`);
     if(!container) return;
 
-    let items=data[type].filter(i=>{
-      let text=(i.name+i.description+(i.tags||[]).join(" ")).toLowerCase();
-      return text.includes(current.search);
+    const items=data[type].filter(i=>{
+      return (i.name+i.description).toLowerCase().includes(current.search);
     });
 
     container.innerHTML=items.map(card).join("");
@@ -130,20 +123,22 @@ function renderAll(){
 function card(i){
   return `
   <div class="card">
-    <img src="${i.image}">
+    <img src="${i.image || ''}">
     <div class="card-content">
       <h3>${i.name}</h3>
       <p>${i.description}</p>
-      <div class="tags">
-        ${(i.tags||[]).map(t=>`<span>${t}</span>`).join("")}
-      </div>
       ${i.url?`<a href="${i.url}" target="_blank">Visitar</a>`:""}
     </div>
   </div>`;
 }
 
-/* FILTERS */
-function populateFilters(){}
+function show(id,btn){
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+
+  document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+  if(btn) btn.classList.add("active");
+}
 
 document.getElementById("searchGlobal").addEventListener("input",e=>{
   current.search=e.target.value.toLowerCase();
