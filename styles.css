@@ -9,6 +9,7 @@ body {
 .topbar {
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:15px 30px;
   background:white;
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
@@ -17,31 +18,56 @@ body {
   z-index:10;
 }
 
-nav button {
-  margin:5px;
-  padding:8px 14px;
-  border:none;
-  border-radius:20px;
-  background:#e9f5ec;
-  cursor:pointer;
+.logo {
+  font-weight:600;
+  text-decoration:none;
+  color:#1b4332;
 }
 
+nav button {
+  background:none;
+  border:none;
+  margin:0 10px;
+  font-size:0.95rem;
+  cursor:pointer;
+  color:#555;
+  transition:0.2s;
+}
+
+nav button:hover,
 nav button.active {
-  background:#2d6a4f;
-  color:white;
+  color:#2d6a4f;
+  font-weight:600;
 }
 
 /* HERO */
 .hero {
+  position:relative;
+  height:60vh;
+  background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-overlay {
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position:relative;
+  color:white;
   text-align:center;
-  padding:60px 20px;
 }
 
 .hero input {
   padding:12px;
   width:60%;
   border-radius:30px;
-  border:1px solid #ddd;
+  border:none;
+  margin-top:15px;
 }
 
 /* CAROUSEL */
@@ -52,6 +78,7 @@ nav button.active {
 .carousel {
   position:relative;
   overflow:hidden;
+  border-radius:12px;
 }
 
 .carousel-track {
@@ -61,32 +88,40 @@ nav button.active {
 
 .slide {
   min-width:100%;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:20px;
+  height:300px;
+  position:relative;
+  color:white;
 }
 
 .slide img {
-  width:320px;
-  height:200px;
+  position:absolute;
+  width:100%;
+  height:100%;
   object-fit:cover;
-  border-radius:12px;
+}
+
+.slide::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
 }
 
 .slide-content {
-  max-width:500px;
+  position:relative;
+  z-index:2;
+  padding:30px;
+  max-width:600px;
 }
 
 .carousel-btn {
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:#2d6a4f;
+  background:rgba(0,0,0,0.5);
   color:white;
   border:none;
   padding:10px;
-  border-radius:50%;
   cursor:pointer;
 }
 
@@ -105,7 +140,6 @@ nav button.active {
   margin:5px;
   background:#ccc;
   border-radius:50%;
-  cursor:pointer;
 }
 
 .carousel-dots span.active {
@@ -126,6 +160,8 @@ nav button.active {
 .card {
   background:white;
   border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
   box-shadow:0 5px 20px rgba(0,0,0,0.05);
   transition:0.3s;
 }
@@ -136,17 +172,27 @@ nav button.active {
 
 .card img {
   width:100%;
-  height:150px;
-  object-fit:contain;
+  height:160px;
+  object-fit:cover;
 }
 
 .card-content {
   padding:15px;
 }
 
-.tags span {
-  background:#d8f3dc;
-  padding:4px 8px;
-  border-radius:10px;
-  margin:2px;
+/* MODAL */
+.modal {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-content {
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  max-width:500px;
 }
