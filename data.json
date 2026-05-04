@@ -2,16 +2,16 @@
   "resources": [
     {
       "name": "PlantNet",
-      "description": "Identificación de plantas mediante IA colaborativa.",
+      "description": "Identificación de plantas mediante inteligencia artificial colaborativa.",
       "url": "https://plantnet.org",
       "category": "Identificación",
       "level": "Beginner",
-      "image": "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa",
+      "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
       "tags": ["ia","identificación","plantas"]
     },
     {
       "name": "GBIF",
-      "description": "Base de datos global de biodiversidad.",
+      "description": "Base de datos global de biodiversidad con millones de registros.",
       "url": "https://www.gbif.org",
       "category": "Base de datos",
       "level": "Advanced",
@@ -20,20 +20,20 @@
     },
     {
       "name": "Flora Ibérica",
-      "description": "Referencia científica de flora española.",
+      "description": "Referencia científica de flora de la península ibérica.",
       "url": "https://www.floraiberica.es",
       "category": "Investigación",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Spanish_forest.jpg",
+      "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9",
       "tags": ["botánica","españa"]
     },
     {
       "name": "iNaturalist",
-      "description": "Plataforma de observación de biodiversidad.",
+      "description": "Plataforma global de observación y clasificación de biodiversidad.",
       "url": "https://www.inaturalist.org",
       "category": "Ciencia ciudadana",
       "level": "Beginner",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Leaf_structure.jpg",
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca",
       "tags": ["comunidad","naturaleza"]
     }
   ],
@@ -41,7 +41,7 @@
   "courses": [
     {
       "name": "Introducción a la Botánica",
-      "description": "Curso básico sobre plantas.",
+      "description": "Curso básico sobre morfología y clasificación de plantas.",
       "url": "#",
       "provider": "MOOC",
       "price": "Free",
@@ -52,13 +52,13 @@
     },
     {
       "name": "Ecología Vegetal",
-      "description": "Relación entre plantas y entorno.",
+      "description": "Estudio de las relaciones entre plantas y su entorno.",
       "url": "#",
       "provider": "Universidad",
       "price": "Paid",
       "category": "Educación",
       "level": "Intermediate",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Meadow_flowers.jpg",
+      "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
       "tags": ["ecología"]
     }
   ],
@@ -66,7 +66,7 @@
   "jobs": [
     {
       "name": "Técnico Ambiental",
-      "description": "Trabajo de campo en conservación.",
+      "description": "Trabajo de campo en conservación de ecosistemas.",
       "url": "#",
       "location": "Andalucía",
       "type": "Field Work",
@@ -78,26 +78,26 @@
     },
     {
       "name": "Investigador en Botánica",
-      "description": "Proyecto de investigación vegetal.",
+      "description": "Proyecto de investigación sobre biodiversidad vegetal.",
       "url": "#",
       "location": "Madrid",
       "type": "Research",
       "remote": false,
       "category": "Empleo",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Botanical_lab.jpg",
+      "image": "https://images.unsplash.com/photo-1581091215367-59ab6b7b5c9b",
       "tags": ["investigación"]
     },
     {
       "name": "Consultor Ambiental",
-      "description": "Análisis de impacto ambiental.",
+      "description": "Evaluación de impacto ambiental y asesoría ecológica.",
       "url": "#",
       "location": "España",
       "type": "Remote",
       "remote": true,
       "category": "Empleo",
       "level": "Intermediate",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Forest_path.jpg",
+      "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
       "tags": ["consultoría","remoto"]
     }
   ],
@@ -105,29 +105,29 @@
   "citizen": [
     {
       "name": "Observation.org",
-      "description": "Plataforma de observación de biodiversidad.",
+      "description": "Plataforma internacional de observación de biodiversidad.",
       "url": "https://observation.org",
       "category": "Ciencia ciudadana",
       "level": "Beginner",
-      "image": "https://observation.org/static/images/logo.png",
+      "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9",
       "tags": ["observación"]
     },
     {
       "name": "eBird",
-      "description": "Base de datos de aves.",
+      "description": "Base de datos global de observaciones de aves.",
       "url": "https://ebird.org",
       "category": "Ciencia ciudadana",
       "level": "Beginner",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Ebird_logo.png",
+      "image": "https://images.unsplash.com/photo-1501706362039-c6e80948bb8c",
       "tags": ["aves"]
     },
     {
       "name": "Natusfera",
-      "description": "Ciencia ciudadana en España.",
+      "description": "Ciencia ciudadana centrada en biodiversidad en España.",
       "url": "https://natusfera.gbif.es",
       "category": "Ciencia ciudadana",
       "level": "Beginner",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "image": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146d",
       "tags": ["españa"]
     }
   ],
@@ -135,29 +135,29 @@
   "journals": [
     {
       "name": "Annals of Botany",
-      "description": "Revista científica internacional.",
+      "description": "Revista científica internacional en botánica.",
       "url": "https://academic.oup.com/aob",
       "category": "Revista científica",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "image": "https://images.unsplash.com/photo-1455885661740-29cbf08a42fa",
       "tags": ["revista"]
     },
     {
       "name": "Plant Ecology",
-      "description": "Ecología vegetal.",
+      "description": "Investigación sobre ecología vegetal.",
       "url": "https://springer.com",
       "category": "Revista científica",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Springer_logo.png",
+      "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
       "tags": ["ecología"]
     },
     {
       "name": "New Phytologist",
-      "description": "Investigación avanzada en plantas.",
+      "description": "Investigación avanzada en ciencias vegetales.",
       "url": "https://nph.onlinelibrary.wiley.com",
       "category": "Revista científica",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "image": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146d",
       "tags": ["investigación"]
     }
   ],
@@ -169,16 +169,16 @@
       "url": "https://www.sebotanica.org",
       "category": "Sociedad científica",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9",
       "tags": ["españa"]
     },
     {
       "name": "Botanical Society of America",
-      "description": "Organización botánica internacional.",
+      "description": "Organización científica internacional en botánica.",
       "url": "https://botany.org",
       "category": "Sociedad científica",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "image": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146d",
       "tags": ["internacional"]
     }
   ],
@@ -186,20 +186,20 @@
   "education": [
     {
       "name": "Coursera",
-      "description": "Cursos universitarios online.",
+      "description": "Plataforma de cursos universitarios online.",
       "url": "https://coursera.org",
       "category": "Educación",
       "level": "Beginner",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg",
+      "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0",
       "tags": ["curso"]
     },
     {
       "name": "edX",
-      "description": "Plataforma de educación online.",
+      "description": "Educación online de universidades internacionales.",
       "url": "https://edx.org",
       "category": "Educación",
       "level": "Beginner",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaf_icon.png",
+      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
       "tags": ["curso"]
     }
   ],
@@ -207,41 +207,42 @@
   "books": [
     {
       "name": "Flora Europaea",
-      "description": "Referencia botánica europea.",
+      "description": "Referencia clásica de flora europea.",
       "url": "",
       "category": "Bibliografía",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png",
+      "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794",
       "tags": ["libro"]
     },
     {
       "name": "Plant Systematics",
-      "description": "Clasificación de plantas.",
+      "description": "Obra sobre clasificación y evolución de plantas.",
       "url": "",
       "category": "Bibliografía",
       "level": "Advanced",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Book_icon.png",
+      "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
       "tags": ["taxonomía"]
     }
   ],
+
   "news": [
-  {
-    "title": "Nueva versión de PlantNet",
-    "description": "Mejoras en identificación automática de especies.",
-    "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
-    "url": "https://plantnet.org"
-  },
-  {
-    "title": "Congreso Botánico 2026",
-    "description": "Evento internacional en España.",
-    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865",
-    "url": "#"
-  },
-  {
-    "title": "Nuevos datos en GBIF",
-    "description": "Miles de registros añadidos.",
-    "image": "https://images.unsplash.com/photo-1476231682828-37e571bc172f",
-    "url": "https://gbif.org"
-  }
-]
+    {
+      "title": "Nueva versión de PlantNet",
+      "description": "Mejoras en identificación automática de especies.",
+      "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
+      "url": "https://plantnet.org"
+    },
+    {
+      "title": "Congreso Botánico 2026",
+      "description": "Evento internacional sobre biodiversidad vegetal.",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865",
+      "url": "#"
+    },
+    {
+      "title": "Nuevos datos en GBIF",
+      "description": "Miles de nuevos registros de especies.",
+      "image": "https://images.unsplash.com/photo-1476231682828-37e571bc172f",
+      "url": "https://gbif.org"
+    }
+  ]
 }
