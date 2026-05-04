@@ -15,33 +15,80 @@
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <h1>BotanyHub</h1>
+    <h1>🌿 BotanyHub</h1>
     <p>El hub definitivo de botánica en España</p>
 
-    <input type="text" id="searchGlobal" placeholder="Buscar...">
+    <input type="text" id="searchGlobal" placeholder="Buscar recursos, cursos, especies...">
 
     <nav>
-      <button onclick="show('resources')">Recursos</button>
-      <button onclick="show('citizen')">Ciencia Ciudadana</button>
-      <button onclick="show('journals')">Revistas</button>
-      <button onclick="show('societies')">Sociedades</button>
-      <button onclick="show('education')">Educación</button>
-      <button onclick="show('books')">Libros</button>
-      <button onclick="show('jobs')">Empleo</button>
+      <button onclick="show('resources')">🌿 Recursos</button>
+      <button onclick="show('courses')">🎓 Cursos</button>
+      <button onclick="show('citizen')">🧪 Ciencia Ciudadana</button>
+      <button onclick="show('journals')">📄 Revistas</button>
+      <button onclick="show('societies')">🏛️ Sociedades</button>
+      <button onclick="show('education')">📚 Educación</button>
+      <button onclick="show('books')">📖 Libros</button>
+      <button onclick="show('jobs')">💼 Empleo</button>
     </nav>
   </div>
 </header>
 
 <main>
-<section id="resources" class="section"></section>
-<section id="citizen" class="section hidden"></section>
-<section id="journals" class="section hidden"></section>
-<section id="societies" class="section hidden"></section>
-<section id="education" class="section hidden"></section>
-<section id="books" class="section hidden"></section>
-<section id="jobs" class="section hidden"></section>
+
+<!-- RECURSOS -->
+<section id="resources" class="section">
+  <h2>🌿 Recursos botánicos</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- CURSOS -->
+<section id="courses" class="section hidden">
+  <h2>🎓 Cursos de botánica</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- CIENCIA CIUDADANA -->
+<section id="citizen" class="section hidden">
+  <h2>🧪 Ciencia ciudadana</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- REVISTAS -->
+<section id="journals" class="section hidden">
+  <h2>📄 Revistas científicas</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- SOCIEDADES -->
+<section id="societies" class="section hidden">
+  <h2>🏛️ Sociedades científicas</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- EDUCACIÓN -->
+<section id="education" class="section hidden">
+  <h2>📚 Plataformas educativas</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- LIBROS -->
+<section id="books" class="section hidden">
+  <h2>📖 Bibliografía botánica</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- EMPLEO -->
+<section id="jobs" class="section hidden">
+  <h2>💼 Empleo en botánica</h2>
+  <div class="grid"></div>
+</section>
+
 </main>
 
+<!-- BOTÓN VOLVER ARRIBA -->
+<button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
 <script src="app.js"></script>
+
 </body>
 </html>
