@@ -34,6 +34,7 @@ body {
 .nav-wrapper {
   display:flex;
   align-items:center;
+  position:relative; /* 🔥 IMPORTANTE para el menú móvil */
 }
 
 nav {
@@ -42,7 +43,7 @@ nav {
   align-items:center;
 }
 
-/* 🔥 BOTONES SIN SALTOS */
+/* BOTONES */
 nav button {
   background:none;
   border:none;
@@ -53,9 +54,9 @@ nav button {
   font-weight:500;
   padding:5px 0;
 
-  /* FIX anti desplazamiento */
   min-width:fit-content;
   white-space:nowrap;
+  transition:color 0.2s ease;
 }
 
 nav button:hover,
@@ -256,13 +257,12 @@ nav button.active {
   background:#2d6a4f;
 }
 
-/* CONTACT (ORIGINAL - mantenido) */
+/* CONTACT */
 iframe {
   border:none;
   border-radius:10px;
 }
 
-/* 🔥 NUEVA SECCIÓN CONTACTO PRO */
 .contact-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
@@ -323,7 +323,7 @@ iframe {
   background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
 }
 
-/* 🔥 MOBILE */
+/* MOBILE */
 @media(max-width:768px){
 
   nav {
@@ -336,10 +336,16 @@ iframe {
     padding:15px;
     box-shadow:0 10px 30px rgba(0,0,0,0.1);
     border-radius:10px;
+    min-width:180px;
   }
 
   nav.open {
     display:flex;
+  }
+
+  nav button {
+    margin:10px 0;
+    text-align:left;
   }
 
   .menu-toggle {
