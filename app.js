@@ -8,42 +8,19 @@ fetch("data.json")
   buildUI();
   buildCarousel();
   renderAll();
+  checkMenu(); // 🔥 nuevo
 });
 
-/* TITLES + DESCRIPCIÓN */
+/* TITLES + TEXTO */
 const sectionsInfo = {
-  resources:{
-    title:"Recursos",
-    text:"Herramientas digitales y bases de datos para identificar y estudiar plantas."
-  },
-  courses:{
-    title:"Cursos",
-    text:"Formación académica y online en botánica."
-  },
-  jobs:{
-    title:"Empleo",
-    text:"Oportunidades profesionales en el ámbito botánico."
-  },
-  citizen:{
-    title:"Ciencia ciudadana",
-    text:"Plataformas colaborativas de biodiversidad."
-  },
-  journals:{
-    title:"Revistas científicas",
-    text:"Publicaciones académicas de referencia."
-  },
-  societies:{
-    title:"Sociedades científicas",
-    text:"Organizaciones dedicadas a la botánica."
-  },
-  education:{
-    title:"Educación",
-    text:"Recursos formativos y plataformas educativas."
-  },
-  books:{
-    title:"Bibliografía",
-    text:"Libros clave para el estudio botánico."
-  }
+  resources:{title:"Recursos",text:"Herramientas digitales y bases de datos para identificar plantas."},
+  courses:{title:"Cursos",text:"Formación en botánica."},
+  jobs:{title:"Empleo",text:"Oportunidades profesionales."},
+  citizen:{title:"Ciencia ciudadana",text:"Plataformas colaborativas."},
+  journals:{title:"Revistas científicas",text:"Publicaciones académicas."},
+  societies:{title:"Sociedades científicas",text:"Organizaciones botánicas."},
+  education:{title:"Educación",text:"Plataformas educativas."},
+  books:{title:"Bibliografía",text:"Libros esenciales."}
 };
 
 /* UI */
@@ -54,7 +31,7 @@ function buildUI(){
   Object.keys(data).forEach(type=>{
     if(type==="news") return;
 
-    const info = sectionsInfo[type] || {title:type,text:""};
+    const info=sectionsInfo[type];
 
     const btn=document.createElement("button");
     btn.innerText=info.title;
@@ -154,6 +131,27 @@ function resetAll(){
   renderAll();
   window.scrollTo({top:0,behavior:"smooth"});
 }
+
+/* 🔥 MENU INTELIGENTE */
+function checkMenu(){
+  const nav=document.getElementById("nav");
+  const toggle=document.querySelector(".menu-toggle");
+
+  // esperar a render
+  setTimeout(()=>{
+    if(nav.scrollWidth > nav.clientWidth){
+      toggle.style.display="block";
+      nav.classList.remove("open");
+    } else {
+      toggle.style.display="none";
+      nav.classList.remove("open");
+      nav.style.display="flex";
+    }
+  },100);
+}
+
+/* 🔥 REACCIONA AL RESIZE */
+window.addEventListener("resize",checkMenu);
 
 /* MOBILE MENU */
 document.querySelector(".menu-toggle").addEventListener("click",()=>{
