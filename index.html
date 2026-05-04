@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BotanyHub España</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BotanyHub España</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,41 +16,31 @@
 
   <div class="hero-content">
     <h1>BotanyHub</h1>
-    <p>Explora la flora, el conocimiento y las oportunidades botánicas en España</p>
+    <p>El hub definitivo de botánica en España</p>
 
-    <div class="search-bar">
-      <input type="text" id="searchGlobal" placeholder="Buscar recursos, cursos o empleo...">
-    </div>
+    <input type="text" id="searchGlobal" placeholder="Buscar...">
 
     <nav>
-      <button onclick="show('resources')">🌿 Recursos</button>
-      <button onclick="show('courses')">🎓 Cursos</button>
-      <button onclick="show('jobs')">💼 Empleo</button>
+      <button onclick="show('resources')">Recursos</button>
+      <button onclick="show('citizen')">Ciencia Ciudadana</button>
+      <button onclick="show('journals')">Revistas</button>
+      <button onclick="show('societies')">Sociedades</button>
+      <button onclick="show('education')">Educación</button>
+      <button onclick="show('books')">Libros</button>
+      <button onclick="show('jobs')">Empleo</button>
     </nav>
   </div>
 </header>
 
 <main>
-
-<section id="resources" class="section">
-  <h2>Recursos botánicos</h2>
-  <div id="resourcesList" class="grid"></div>
-</section>
-
-<section id="courses" class="section hidden">
-  <h2>Cursos</h2>
-  <div id="coursesList" class="grid"></div>
-</section>
-
-<section id="jobs" class="section hidden">
-  <h2>Empleo en botánica</h2>
-  <div id="jobsList" class="grid"></div>
-</section>
-
+<section id="resources" class="section"></section>
+<section id="citizen" class="section hidden"></section>
+<section id="journals" class="section hidden"></section>
+<section id="societies" class="section hidden"></section>
+<section id="education" class="section hidden"></section>
+<section id="books" class="section hidden"></section>
+<section id="jobs" class="section hidden"></section>
 </main>
-
-<!-- Botón flotante -->
-<a class="floating-btn" href="#resources">⬆</a>
 
 <script src="app.js"></script>
 </body>
