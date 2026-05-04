@@ -6,6 +6,7 @@
 <title>BotanyHub</title>
 
 <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,14 +16,26 @@
 
   <div class="nav-wrapper">
     <button class="menu-toggle">☰</button>
-    <nav id="nav"></nav>
+    <nav id="nav">
+      <a href="resources.html">Recursos</a>
+      <a href="courses.html">Cursos</a>
+      <a href="jobs.html">Empleo</a>
+      <a href="citizen.html">Ciencia ciudadana</a>
+      <a href="journals.html">Revistas</a>
+      <a href="societies.html">Sociedades</a>
+      <a href="education.html">Educación</a>
+      <a href="books.html">Bibliografía</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
   </div>
 </header>
 
 <section class="hero-video">
-  <video autoplay muted loop>
-    <source src="https://cdn.coverr.co/videos/coverr-forest-stream-9710/1080p.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.pixabay.com/vimeo/458987874/forest-45775.mp4" type="video/mp4">
   </video>
+
+  <div class="hero-overlay"></div>
 
   <div class="hero-content">
     <h1>El hub definitivo de botánica</h1>
@@ -34,21 +47,20 @@
 
 <section class="intro">
   <p>
-    BotanyHub reúne los principales recursos botánicos en un único lugar.
-    Desde bases de datos hasta formación, empleo y ciencia ciudadana.
+    BotanyHub reúne en un único lugar los principales recursos botánicos disponibles.
+    Desde herramientas de identificación hasta revistas científicas, empleo y formación especializada.
   </p>
 </section>
 
-<section class="links">
-  <a href="resources.html">Recursos</a>
-  <a href="courses.html">Cursos</a>
-  <a href="jobs.html">Empleo</a>
-  <a href="citizen.html">Ciencia ciudadana</a>
-  <a href="journals.html">Revistas</a>
-  <a href="societies.html">Sociedades</a>
-  <a href="education.html">Educación</a>
-  <a href="books.html">Bibliografía</a>
-  <a href="contact.html">Contacto</a>
+<section class="news-section">
+  <h2>Novedades</h2>
+
+  <div class="carousel" id="carousel">
+    <div class="carousel-track"></div>
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
+    <div class="carousel-dots"></div>
+  </div>
 </section>
 
 <script src="app.js"></script>
