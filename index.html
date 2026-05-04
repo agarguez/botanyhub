@@ -12,55 +12,34 @@
 <body>
 
 <header class="topbar">
-  <a href="./" class="logo" onclick="resetAll()">BotanyHub</a>
-
-  <div class="nav-wrapper">
-    <button class="menu-toggle">☰</button>
-
-    <nav id="nav">
-      <a href="resources.html">Recursos</a>
-      <a href="courses.html">Cursos</a>
-      <a href="jobs.html">Empleo</a>
-      <a href="citizen.html">Ciencia ciudadana</a>
-      <a href="journals.html">Revistas</a>
-      <a href="societies.html">Sociedades</a>
-      <a href="education.html">Educación</a>
-      <a href="books.html">Bibliografía</a>
-      <a href="contact.html">Contacto</a>
-    </nav>
-  </div>
+  <a href="./" class="logo">BotanyHub</a>
+  <nav id="nav"></nav>
 </header>
 
-<section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.pixabay.com/vimeo/458987874/forest-45775.mp4" type="video/mp4">
-  </video>
-
+<section class="hero">
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
-    <h1>El hub definitivo de botánica</h1>
-    <p>Explora recursos, ciencia y oportunidades</p>
+    <h1>El hub definitivo de recursos botánicos</h1>
+    <p>Encuentra herramientas, cursos, revistas y oportunidades en segundos</p>
 
-    <input type="text" id="searchGlobal" placeholder="Buscar en toda la web...">
+    <input type="text" id="searchGlobal" placeholder="Buscar recursos...">
   </div>
 </section>
 
 <section class="news-section">
   <h2>Novedades</h2>
 
-  <div class="carousel">
+  <div class="carousel" id="carousel">
     <div class="carousel-track"></div>
+
     <button class="carousel-btn prev">‹</button>
     <button class="carousel-btn next">›</button>
+
     <div class="carousel-dots"></div>
   </div>
 </section>
 
-<section class="results-section hidden">
-  <h2>Resultados</h2>
-  <div id="results" class="grid"></div>
-</section>
+<main id="mainContent"></main>
 
 <script src="app.js"></script>
 </body>
